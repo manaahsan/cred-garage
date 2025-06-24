@@ -5,7 +5,7 @@ import Image from "next/image";
 import StatCard from "@/components/shared/StatCard";
 import ChartSection from "@/components/shared/ChartSection";
 import UserProfileSummary from "@/components/shared/UserProfileSummary";
-import BenefitsSection from "@/components/shared/BenefitSection";
+import BenefitsSection from "@/components/shared/RewardSection";
 import RewardLinearProgress from "@/components/shared/RewardLinearProgress";
 import SkeletonLoader from "@/components/shared/SkeletonLoader"; // 👈 new
 
@@ -44,7 +44,7 @@ export default function Home() {
             )}
           </div>
           {/* Stat Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6 p-6 bg-card-foreground rounded-xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-5 p-6 bg-card-foreground rounded-xl">
             {loading ? (
               Array(4)
                 .fill(0)
@@ -56,10 +56,10 @@ export default function Home() {
                 ))
             ) : (
               <>
-                <StatCard title="Earnings" value="$5,400" />
-                <StatCard title="Points Earned" value="23,000" />
-                <StatCard title="Redemptions" value="12" />
-                <StatCard title="Rank" value="#4" />
+                <StatCard title="Earnings" value="$5,400" change={200} />
+                <StatCard title="Points Earned" value="23,000" change={1000} />
+                <StatCard title="Redemptions" value="12" change={2} />
+                <StatCard title="Rank" value="#4" change={100} rank={false} />
               </>
             )}
           </div>
@@ -82,13 +82,13 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             {loading ? (
-              <SkeletonLoader className="h-[300px] w-full rounded-2xl" />
+              <SkeletonLoader className="h-[300px] w-full rounded-xl" />
             ) : (
               <Image
                 src="/assets/images/banner.png"
                 alt="banner"
                 fill
-                className="rounded-xl object-contain"
+                className="rounded-xl object-cover"
               />
             )}
           </motion.div>

@@ -21,7 +21,8 @@ export default function RewardLinearProgress({
           animate={{ width: `${percent}%` }}
           transition={{ duration: 0.6 }}
           className={`h-full rounded-full bg-background`}
-        />
+        >
+        </motion.div>
       </div>
       <div className="mt-2 text-sm text-muted-foreground">
         Reward Points:{" "}

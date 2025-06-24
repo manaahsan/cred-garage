@@ -10,6 +10,7 @@ import {
 
 // components
 import { Nav } from "@/components/shared/Nav";
+import {Logout} from "@/components/shared/Logout"
 
 // useContext
 import { useAppContext } from "@/context/AppContext";
@@ -29,6 +30,7 @@ export const CustomSheet = () => {
           </SheetTitle>
           <div>
             <Nav />
+            <Logout/>
           </div>
         </SheetHeader>
       </SheetContent>

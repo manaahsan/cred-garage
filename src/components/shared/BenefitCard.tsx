@@ -23,7 +23,7 @@ export default function BenefitCard({
       whileHover={{ y: -4, scale: 1.02 }}
       className="bg-card rounded-2xl p-5 shadow-lg text-card-foreground flex flex-col justify-between transition-all"
     >
-      <div className="flex items-center gap-3 mb-4">
+      <div className="flex items-center gap-3 mb-4 h-16">
         <span className="text-3xl">{icon}</span>
         <h3 className="text-lg font-semibold text-foreground">{title}</h3>
       </div>

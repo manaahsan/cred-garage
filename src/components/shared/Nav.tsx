@@ -9,7 +9,7 @@ import { useAppContext } from "@/context/AppContext";
 import { menuItems } from "@/lib/helper";
 
 export function Nav() {
-  const { motion } = useAppContext();
+  const { motion, setIsOpenMobile } = useAppContext();
   const pathname = usePathname();
 
   return (
@@ -17,7 +17,7 @@ export function Nav() {
       {menuItems.map((item, index) => {
         const isActive = pathname === item.href;
         return (
-          <Link key={item.href} href={item.href} className="block">
+          <Link key={item.href} href={item.href} className="block" onClick={()=>setIsOpenMobile(false)}>
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -25,7 +25,7 @@ export function Nav() {
               className={`flex items-center rounded-lg px-4 py-2 hover:bg-gray-100 transition-colors
               ${
                 isActive
-                  ? "bg-hover-active text-foreground bg-card-foreground hover:text-black "
+                  ? "bg-hover-active text-muted-foreground bg-card-foreground hover:text-black "
                   : "text-secondary"
               }`}
               whileHover={{ scale: 1.02 }}

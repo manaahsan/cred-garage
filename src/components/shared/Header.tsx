@@ -2,10 +2,10 @@
 
 // components
 import { ThemeToggle } from "@/components/shared/ThemeToggle";
+import {Logout} from "@/components/shared/Logout"
 
 // useContext
-import { useAppContext } from '@/context/AppContext';
-
+import { useAppContext } from "@/context/AppContext";
 
 interface HeaderProps {
   className?: string;
@@ -40,15 +40,15 @@ export function Header({ className }: HeaderProps) {
               width="24"
               height="24"
               viewBox="0 0 24 24"
-              fill="none"
+              fill="#fff"
               stroke="currentColor"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
             >
-              <line x1="3" y1="12" x2="21" y2="12" />
-              <line x1="3" y1="6" x2="21" y2="6" />
-              <line x1="3" y1="18" x2="21" y2="18" />
+              <line x1="3" y1="12" x2="21" y2="12" color="#fff" />
+              <line x1="3" y1="6" x2="21" y2="6" color="#fff" />
+              <line x1="3" y1="18" x2="21" y2="18" color="#fff" />
             </svg>
           </motion.button>
           <motion.h1
@@ -64,9 +64,12 @@ export function Header({ className }: HeaderProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
-          className="flex items-center space-x-4"
+          className="flex items-end space-x-4 md:items-center"
         >
           <ThemeToggle />
+          <div className="hidden md:block">
+            <Logout/>
+          </div>
         </motion.div>
       </div>
     </motion.header>

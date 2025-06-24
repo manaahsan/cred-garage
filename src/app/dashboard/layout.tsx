@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 // components
 import { Header } from "@/components/shared/Header";
@@ -20,7 +20,9 @@ function LayoutContent({ children }: { children: React.ReactNode }) {
         }`}
       >
         <Header />
-        <main className="flex-1 overflow-y-auto p-4  bg-[#EAF6F6] md:p-6">{children}</main>
+        <main className="flex-1 overflow-y-auto p-4  bg-child md:p-6">
+          {children}
+        </main>
       </div>
     </div>
   );

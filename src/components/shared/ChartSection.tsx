@@ -8,7 +8,6 @@ import {
   CartesianGrid,
 } from "recharts";
 
-
 // helper
 import { data } from "@/lib/helper";
 
@@ -34,7 +33,13 @@ export default function ChartSection() {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" className="text-base" />
           <YAxis className="text-base" />
-          <Tooltip />
+          <Tooltip
+            formatter={(value: string, name: string) => {
+              const capitalizedName =
+                name.charAt(0).toUpperCase() + name.slice(1);
+              return [`$${value}`, capitalizedName];
+            }}
+          />
           <Line
             connectNulls
             type="monotone"
