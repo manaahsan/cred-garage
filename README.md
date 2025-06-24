@@ -6,7 +6,7 @@ A modern web dashboard built for **Cred Garage**, designed using Next.js and Tai
 
 ## 🛠 Tech Stack
 
-- **Next.js 15(APP ROUTER)** – React framework for building fast, full-stack web applications
+- **Next.js 15 (App Router)** – React framework for building fast, full-stack web applications
 - **TypeScript** – Static typing for better developer experience
 - **Tailwind CSS** – Utility-first CSS framework for rapid UI development
 - **shadcn/ui** – Beautiful, accessible UI components built on Radix UI
@@ -21,12 +21,23 @@ A modern web dashboard built for **Cred Garage**, designed using Next.js and Tai
 
 1. **Clone the repository**
 
-   https://github.com/manaahsan/cred-garage.git
+   ```bash
+   git clone https://github.com/manaahsan/cred-garage.git
    cd cred-garage
-   npm install
-   # or
-   yarn install
-   
+
+   ```
+
+2. **Install dependencies**
    npm run dev
+
    # or
+
+   yarn dev
+
+3. **Run the development**
+
+   npm run dev
+
+   # or
+
    yarn dev
