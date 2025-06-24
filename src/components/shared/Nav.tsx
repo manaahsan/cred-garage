@@ -25,7 +25,7 @@ export function Nav() {
               className={`flex items-center rounded-lg px-4 py-2 hover:bg-gray-100 transition-colors
               ${
                 isActive
-                  ? "bg-hover-active text-muted-foreground bg-card-foreground hover:text-black "
+                  ? "bg-hover-active text-muted-foreground bg-white hover:text-black "
                   : "text-secondary"
               }`}
               whileHover={{ scale: 1.02 }}

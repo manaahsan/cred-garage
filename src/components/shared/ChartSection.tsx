@@ -7,11 +7,15 @@ import {
   YAxis,
   CartesianGrid,
 } from "recharts";
-
+import { useTheme } from 'next-themes';
 // helper
 import { data } from "@/lib/helper";
+import { CustomTooltip } from "./CustomToolTip";
 
 export default function ChartSection() {
+  const { theme } = useTheme();
+
+  const lineColor = theme === 'dark' ? '#ffffff' : '#113b47';
   return (
     <div className="bg-card-foreground p-6 rounded-2xl">
       <h2 className="text-foreground mb-4 text-base font-semibold">
@@ -34,18 +38,14 @@ export default function ChartSection() {
           <XAxis dataKey="name" className="text-base" />
           <YAxis className="text-base" />
           <Tooltip
-            formatter={(value: string, name: string) => {
-              const capitalizedName =
-                name.charAt(0).toUpperCase() + name.slice(1);
-              return [`$${value}`, capitalizedName];
-            }}
+            content={<CustomTooltip/>}
           />
           <Line
             connectNulls
             type="monotone"
             dataKey="earnings"
-            stroke="#113b47"
-            fill="#113b47"
+            stroke={lineColor}
+            fill={lineColor}
           />
         </LineChart>
       </ResponsiveContainer>

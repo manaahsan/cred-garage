@@ -13,15 +13,10 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(true);
   const [isOpenMobile, setIsOpenMobile] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(
-    typeof window !== "undefined" ? !!localStorage.getItem("logged_in") : false
-  );
 
   const toggleSidebar = () => setIsOpenMobile((prev) => !prev);
   const closeSidebar = () => setIsOpen(false);
   const value = {
-    isLoggedIn,
-    setIsLoggedIn,
     isOpen,
     setIsOpen,
     isOpenMobile,

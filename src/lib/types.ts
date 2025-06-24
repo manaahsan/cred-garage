@@ -2,8 +2,6 @@ import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.share
 import  { motion } from "framer-motion";
 
 export type AppContextType = {
-  isLoggedIn: boolean;
-  setIsLoggedIn: (value: boolean) => void;
   isOpen: boolean;
   setIsOpen: (value: boolean) => void;
   isOpenMobile: boolean;
