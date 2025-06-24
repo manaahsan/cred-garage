@@ -27,7 +27,7 @@ export default function Home() {
       >
         <motion.h1
           variants={itemVariants}
-          className="text-4xl md:text-5xl font-bold mb-4 tracking-tight text-primary-foreground"
+          className="text-4xl md:text-5xl font-bold mb-4 tracking-tight text-primary"
         >
           Welcome to Your Rewards Dashboard
         </motion.h1>
@@ -50,7 +50,7 @@ export default function Home() {
         >
           <Button
             onClick={handleEnter}
-            className="inline-block bg-primary-foreground text-foreground px-6  text-sm font-medium transition hover:opacity-90"
+            className="inline-block bg-primary-foreground text-foreground px-6  text-sm font-medium transition hover:text-black"
           >
             Get Started
           </Button>

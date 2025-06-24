@@ -15,7 +15,7 @@ export default function RewardLinearProgress({
     <div className="w-full space-y-2 bg-card p-6 rounded-2xl">
       <h2 className="text-base font-bold text-foreground">Reward Progress</h2>
       {/* Progress Track */}
-      <div className="bg-muted rounded-full h-3">
+      <div className="bg-muted rounded-full h-3 shadow">
         <motion.div
           initial={{ width: 0 }}
           animate={{ width: `${percent}%` }}

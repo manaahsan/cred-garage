@@ -42,3 +42,7 @@ A modern web dashboard built for **Cred Garage**, designed using Next.js and Tai
    # or
 
    yarn dev
+
+4. **Loom video**
+
+   https://www.loom.com/share/cfaf9dd5c9bc4c79830c83634078a5e1
