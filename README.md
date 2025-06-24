@@ -28,6 +28,7 @@ A modern web dashboard built for **Cred Garage**, designed using Next.js and Tai
    ```
 
 2. **Install dependencies**
+
    npm run dev
 
    # or
