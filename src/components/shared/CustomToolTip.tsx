@@ -1,7 +1,7 @@
 import { useTheme } from 'next-themes';
 import { TooltipProps } from 'recharts';
 
-export const CustomTooltip = ({ active, payload, label }: TooltipProps<any, any>) => {
+export const CustomTooltip = ({ active, payload, label }: TooltipProps<string, number>) => {
   const { theme } = useTheme();
 
   if (active && payload && payload.length) {
@@ -20,9 +20,9 @@ export const CustomTooltip = ({ active, payload, label }: TooltipProps<any, any>
         }}
       >
         <p className="label">{label}</p>
-        {payload.map((item: any, index: number) => (
+        {payload.map((item, index) => (
           <p key={index}>
-            {item.name.charAt(0).toUpperCase() + item.name.slice(1)}: ${item.value}
+            {String(item.name).charAt(0).toUpperCase() + String(item.name).slice(1)}: ${item.value}
           </p>
         ))}
       </div>
