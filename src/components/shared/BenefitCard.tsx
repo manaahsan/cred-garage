@@ -25,7 +25,7 @@ export default function BenefitCard({
     >
       <div className="flex items-center gap-3 mb-4 h-16">
         <span className="text-3xl">{icon}</span>
-        <h3 className="text-lg font-semibold text-foreground">{title}</h3>
+        <h3 className="text-lg font-semibold text-foreground leading-6">{title}</h3>
       </div>
 
       <p className="text-muted-foreground text-sm flex-1">{description}</p>

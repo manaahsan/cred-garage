@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+
 // components
 import StatCard from "@/components/shared/StatCard";
 import ChartSection from "@/components/shared/ChartSection";

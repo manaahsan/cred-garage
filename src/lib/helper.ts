@@ -13,7 +13,7 @@ export const benefits = [
     },
     {
       icon: "🎧",
-      title: "Spotify Premium Free",
+      title: "Spotify Premium",
       description: "Get 3 months of Spotify Premium for free. No ads, no limits.",
       cta: "Activate",
     },
@@ -27,7 +27,7 @@ export const benefits = [
 
  export  const menuItems = [
     { href: '/dashboard', label: 'Home' },
-    { href: '/dashboard/redeem', label: 'Redeem' },
+    { href: '/dashboard/reward', label: 'Reward' },
     { href: '/dashboard/profile', label: 'Profile' },
   ]
 
